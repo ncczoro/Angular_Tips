@@ -50,3 +50,19 @@ https://stackblitz.com/angular/oyykxqlgyryp
 - https://stackoverflow.com/questions/34326745/whats-the-difference-between-viewchild-and-contentchild
 - viewInit(), viewCheck(): @viewChild
 - contentInit(), contentCheck(): @ContentChild
+
+### Content Projection (ng-content, ngProjectAs)
+```html
+<lib-commom-syntax>
+        <h1 common>ng Content 111 works </h1>
+        <h1 common2>ng Content 222 works </h1>
+        <h1 ngProjectAs="app-h1">conponent app-1</h1>
+    </lib-commom-syntax>
+<!--lib-commom-syntax.html-->
+    <ng-content select="[common2]"></ng-content>
+    <p>commom-syntax works! common below</p>
+    <ng-content select="[common]"></ng-content>
+    <p>component app-1 below</p>
+    <ng-content select="[app-h1]"></ng-content>
+
+```

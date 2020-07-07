@@ -10,6 +10,8 @@ providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}]
 ```
 3. Add rewrite module to IIS
 https://download.microsoft.com/download/1/2/8/128E2E22-C1B9-44A4-BE2A-5859ED1D4592/rewrite_amd64_en-US.msi
+
+![install rewirte module][ss1]
 4. ng build --prod, and add file web.config in file build root
 
 ```xml
@@ -33,3 +35,12 @@ https://download.microsoft.com/download/1/2/8/128E2E22-C1B9-44A4-BE2A-5859ED1D45
         </system.webServer>
     </configuration>
 ```
+
+## Documentation  
+
+https://angular.io/guide/deployment#routed-apps-must-fallback-to-indexhtml
+
+![nice][ss2]
+
+[ss1]: assset/rewrite-module.PNG
+[ss2]: assset/anime_girl_book_person_92295_1920x1080.jpg
